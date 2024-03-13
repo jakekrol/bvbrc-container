@@ -1,0 +1,15 @@
+# could substitute with other distros
+FROM ubuntu:latest
+
+RUN mkdir /data
+
+# install bvbrc CLI
+RUN apt-get --fix-missing update && \
+    apt install -y wget && \
+    cd /tmp && \
+    wget 'https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb' && \
+    apt install -y ./bvbrc-cli-1.040.deb -f && \
+    rm bvbrc-cli-1.040.deb
+
+WORKDIR /data
+

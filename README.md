@@ -1,4 +1,4 @@
-# Examples of using bvbrc command-line with docker/sigularity containers
+# Examples of using bvbrc command-line with docker/singularity containers
 
 ## Summary
 
